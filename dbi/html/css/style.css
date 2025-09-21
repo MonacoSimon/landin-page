@@ -348,11 +348,11 @@ button {
 .image_1 {
     width: 100%;
     float: left;
-    background-image: url(../images/img-1.png);
-    height: auto;
-    background-size: 100%;
+    background-image: url(../images/secreto2.jpeg);
+    height: 420px; /* o el alto que necesites */
+    background-size: cover; 
+    background-position: center; 
     background-repeat: no-repeat;
-    padding-bottom: 40px;
 }
 
 .image_2 {
@@ -832,12 +832,29 @@ input.email_text::placeholder {
 .iamge_movies_main {
     width: 100%;
     display: flex;
+    flex-wrap: wrap; /* Para que las películas pasen a la siguiente fila si no caben */
+    gap: 20px; /* Espacio entre tarjetas */
+    justify-content: space-between;
 }
 
 .iamge_movies {
+    flex: 1 1 calc(20% - 20px); 
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    min-height: 400px; 
+}
+
+.iamge_movies .image_3 img {
     width: 100%;
-    float: left;
-    margin: 0px 13px;
+    height: auto;
+    display: block;
+}
+
+.iamge_movies h1.code_text,
+.iamge_movies p.there_text,
+.iamge_movies .star_icon {
+    text-align: center;
 }
 
 .copyright_section {
